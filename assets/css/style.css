@@ -1,15 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 *{
 	box-sizing: border-box;
 }
 
 body{
 	margin: 0;
-	font-family: Verdana, sans-serif;
-	font-size: 13px;
-}
-
-h1, h2, h3, h4, h5, h6{
-	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 
 section{
@@ -19,102 +16,90 @@ section{
 
 a {
 	text-decoration: none;
+	color: #fff;
 }
 
 .container{
-    width: 100%;
-    padding: 15px;
+    width: 90%;
+    margin: 0px auto;
 }
 
-.column{
+header {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	background: #591e7d;
+	color: #fff;
 	padding: 15px;
-	float: left;
+	height: 50px;
 }
 
-.column-3{
-	width: 100%;
-}
-
-.column-6{
-	width: 100%;
-}
-
-.column-12{
-	width: 100%
-}
-
-nav{
-	width: 100%;
-	overflow: hidden;
-	background-color: #333;
-	position: fixed;
-    top: 0;
-    z-index: 1;
-}
-
-nav:hover .menu-link{
-    display: block;
-}
-
-nav .logo{
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-}
-
-nav .menu{
+header nav ul {
+	margin: 0;
+	margin-top: -5px;
+	padding: 0;
 	float: right;
-	color: #f2f2f2;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header nav ul li {
+	margin: 0;
+	display: inline;
+	padding: 8px;
+	cursor: pointer;
 	text-align: center;
-	padding: 14px 16px;
+	transition: 0.5s;
+	font-size: 0.9em;
 }
 
-nav .menu-link{
-	float: right;
-	display: none;
-	color: #f2f2f2;
-	text-align: right;
-    padding: 14px 16px;
-    width: 100%;
-}
-
-nav .menu-link:hover{
-	background-color: #1598c3;
+header nav ul li:hover {
+	background: #8d3bbf;
 }
 
 main section.banner{
 	width: 100%;
 	height: 596px;
-	background-image: url(../img/716.jpg);
+	background-image: url(../img/banner1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: left top;
 }
 
-main section.banner h2{
-	width: 100%;
-	color: #fff;
-	float: left;
-	margin-top: 250px;
-	text-shadow: 2px 2px 5px #333;
-}
-
-main section.banner p{
-	width: 100%;
-	color: #fff;
+main section.banner h1{
 	text-align: center;
-	float: left;
-	margin-top: 10px;
+	margin-top: 200px;
+	color: #fff;
 	text-shadow: 2px 2px 5px #333;
 }
 
-main section.servicos .column .imagem{
-	height: 500px;
-	box-shadow: 2px 2px 5px #aaa;
+main section.banner h2{
+	text-align: center;
+	margin-top: 10px;
+	color: #fff;
+	text-shadow: 2px 2px 5px #333;
 }
 
-main section.servicos .column .imagem:hover{
+main section.servicos h1 {
+	color: #591e7d;
+	text-align: center;
+	margin-top: 20px;
+}
+
+main section.servicos .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 15px;
+}
+
+main section.servicos .container .imagem {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 25vh;
+	transition: 2s;
+}
+
+main section.servicos .container .imagem:hover{
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	-ms-filter: grayscale(100%);
@@ -122,100 +107,47 @@ main section.servicos .column .imagem:hover{
 	filter: grayscale(100%);
 }
 
-main section.servicos .column #imagem1{
-	background-image: url(../img/718.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
+main section.servicos .container #imagem1 {
+	background-image: url(../img/1.jpg);
 }
 
-main section.servicos .column #imagem2{
-	background-image: url(../img/719.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
+main section.servicos .container #imagem2 {
+	background-image: url(../img/2.jpg);
 }
 
-main section.servicos .column #imagem3{
-	background-image: url(../img/720.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
+main section.servicos .container #imagem3 {
+	background-image: url(../img/3.jpg);
 }
 
-main section.quem-somos{
-	height: 450px;
-	background-image: url(../img/717.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-attachment: fixed;     /* Mudança */
-	color: #fff;
-}
-
-main section.quem-somos h2{
-	margin-top: 70px;
-}
-
-main section.quem-somos p{
-	margin-top: 70px;
-	text-align: justify;
-}
-
-footer{
+main section.servicos .container h2 {
 	width: 100%;
-	height: 100px;
-	background-color: #ddd;
-	float: left;
-	padding: 20px;
 	text-align: center;
 }
 
-@media(min-width: 767px){
+main section.quem-somos{
+	height: 350px;
+	background-image: url(../img/banner2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	color: #fff;
+}
 
-	.container{
-	    width: 1100px;
-	    margin: 0px auto;
-	}
+main section.quem-somos h1 {
+	text-align: center;
+	margin-top: 70px;
+}
 
-	.column{
-	    padding: 15px;
-	    float: left;
-	}
+main section.quem-somos p {
+	text-align: justify;
+	line-height: 1.5em;
+}
 
-	.column-3{
-	    width: 33.33%;
-	}
-
-	.column-6{
-	    width: 50%;
-	}
-
-	.column-12{
-	    width: 100%
-	}
-
-	nav .menu{
-	    display:none;
-	}
-
-	nav .menu-link{
-	    float: right;
-	    display: block;
-	    text-align: center;
-	    width: initial;
-	}
-    
-    main section.banner{
-	    background-position: center center;
-	}
-
-	main section.quem-somos h2{
-	    margin-top: 100px;
-	}
-
-	main section.quem-somos p{
-	    margin-top: 100px;
-	}
-
+footer{
+	float: left;
+	width: 100%;
+	background-color: #ddd;
+	padding: 20px;
+	text-align: center;
 }
